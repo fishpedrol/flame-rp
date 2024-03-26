@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SInteriorOrderData>
+	<startFrom value="5100" />
+	<filePathHash value="0" />
+	<proxies>
+		<Item>cs1_occl_09</Item>
+		<Item>cs4_occl_03</Item>
+		<Item>hospitalsandy_interior</Item>
+	</proxies>
+</SInteriorOrderData>

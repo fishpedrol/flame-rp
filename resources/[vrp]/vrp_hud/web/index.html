@@ -1,0 +1,52 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+  <script src="app.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Titillium+Web&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <div class="all">
+    <div class="imgserver">
+      <img src="https://cdn.discordapp.com/attachments/1221120984279421011/1221237385719975966/Logo_Flame.png?ex=6611d8f2&is=65ff63f2&hm=0cadb72c432c75dd36eaaa728a873ff6a12beb7e8cedff16787d48210de44a66&" height="160px" width="200px"></div>
+
+    <div class="test">
+      <div class="dc">
+        <p>DISCORD.GG/FLAMERP</p>
+      </div>
+      <div id="hudDisplay">
+        <div class="healthBack">
+          <div class="healthDisplay"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <script>
+    $(document).ready(function() {
+      window.addEventListener('message', function(event) {
+        let data = event.data;
+
+        $("#hudDisplay").css("display", data.show ? "block" : "block");
+        $(".healthDisplay").css("width", data.vida + "%");
+
+        if (data.vida <= 0) {
+          $('.sta').addClass('animL')
+        } else {
+          $('.sta').removeClass('animL')
+        }
+
+      });
+    });
+  </script>
+  <script src="https://kit.fontawesome.com/b17cbc7c38.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

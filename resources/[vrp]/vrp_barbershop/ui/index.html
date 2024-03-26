@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="src/css/index.css">
+
+  <script src='https://unpkg.com/vue@2.6.14/dist/vue.js'></script>
+</head>
+<body style="display: none;">
+
+  <main>
+    <header>
+      <h1>barbearia</h1>
+      <div class="cart">
+        <a class="icon yes"><i class="fas fa-shopping-bag"></i></a>
+        <div class="cart-price">
+        </div>
+        <div class="close"><i class="fal fa-times"></i></div>
+      </div>
+    </header>
+
+    <section>
+      <content id="pageCustom">
+        <div class="shop">
+          <div class="item" @mouseover="setHover('hair')">
+            <span><input value="0" class="number" ref="hair" type="number" min="-1" max="77" v-model.number="hairModel" @input="barberShop">/77</span>
+            <small>Estilo Cabelo</small>
+            <div class="input">
+              <input value="0" type="range" id="hair" class="slider" min="-1" max="77" v-model.number="hairModel" @input="barberShop">
+            </div>
+          </div>
+          <div class="item" @mouseover="setHover('oneColor')">
+            <span><input value="0" class="number" ref="oneColor" type="number" min="-1" max="60" v-model.number="firstHairColor" @input="barberShop">/60</span>
+            <small>Cores Cabelo</small>
+            <div class="input">
+              <input value="0" type="range" id="haircolor" class="slider" min="-1" max="60" v-model.number="firstHairColor" @input="barberShop">
+            </div>
+          </div>
+          <div class="item" @mouseover="setHover('secondColor')">
+            <span><input value="0" class="number" ref="secondColor" type="number" min="-1" max="60" v-model.number="secondHairColor" @input="barberShop">/60</span>
+            <small>luzes cabelo</small>
+            <div class="input">
+              <input value="0" type="range" id="haircolor2" class="slider" min="-1" max="60" v-model.number="secondHairColor" @input="barberShop">
+            </div>
+          </div>
+          <div class="item" @mouseover="setHover('makeup')">
+            <span><input value="0" class="number" ref="makeup" type="number" min="-1" max="72" v-model.number="makeupModel" @input="barberShop">/72</span>
+            <small>Maquiagem</small>
+            <div class="input">
+              <input value="0" type="range" id="makeup" class="slider" min="-1" max="72" v-model.number="makeupModel" @input="barberShop">
+            </div>
+          </div>
+          <div class="item" @mouseover="setHover('makeupcolor')">
+            <span><input value="0" class="number" ref="makeupcolor" type="number" min="-1" max="62" v-model.number="makeupcolor" @input="barberShop">/62</span>
+            <small>Cores maquiagem</small>
+            <div class="input">
+              <input value="0" type="range" id="makeupcolor" class="slider" min="-1" max="62" v-model.number="makeupcolor" @input="barberShop">
+            </div>
+          </div>
+          <div class="item" @mouseover="setHover('batom')">
+            <span><input value="0" class="number" ref="batom" type="number" min="-1" max="10" v-model.number="lipstickModel" @input="barberShop">/10</span>
+            <small>Estilo batom</small>
+            <div class="input">
+              <input value="0" type="range" id="lipstick" class="slider" min="-1" max="10" v-model.number="lipstickModel" @input="barberShop">
+            </div>
+          </div>
+          <div class="item" @mouseover="setHover('batomcolor')">
+            <span><input value="0" class="number" ref="batomcolor" type="number" min="-1" max="63" v-model.number="lipstickColor" @input="barberShop">/63</span>
+            <small>Cores batom</small>
+            <div class="input">
+              <input value="0" type="range" id="lipstickcolor" class="slider" min="-1" max="63" v-model.number="lipstickColor" @input="barberShop">
+            </div>
+          </div>
+          <div class="item" @mouseover="setHover('eyer')">
+            <span><input value="0" class="number" ref="eyer" type="number" min="-1" max="34" v-model.number="eyebrowsModel" @input="barberShop">/34</span>
+            <small>Sobrancelha</small>
+            <div class="input">
+              <input value="0" type="range" id="eyebrow" class="slider" min="-1" max="34" v-model.number="eyebrowsModel" @input="barberShop">
+            </div>
+          </div>
+          <div class="item" @mouseover="setHover('eyercolor')">
+            <span><input value="0" class="number" ref="eyercolor" type="number" min="-1" max="54" v-model.number="eyebrowsColor" @input="barberShop">/54</span>
+            <small>Cores Sobrancelha</small>
+            <div class="input">
+              <input value="0" type="range" id="eyebrowcolor" class="slider" min="-1" max="54" v-model.number="eyebrowsColor" @input="barberShop">
+            </div>
+          </div>
+          <div class="item" @mouseover="setHover('beard')">
+            <span><input value="0" class="number" ref="beard" type="number" min="-1" max="28" v-model.number="beardModel" @input="barberShop">/28</span>
+            <small>Estilo Barba</small>
+            <div class="input">
+              <input value="0" type="range" id="beard" class="slider" min="-1" max="28" v-model.number="beardModel" @input="barberShop">
+            </div>
+          </div>
+          <div class="item" @mouseover="setHover('beardcolor')">
+            <span><input value="0" class="number" ref="beardcolor" type="number" min="-1" max="54" v-model.number="beardColor" @input="barberShop">/54</span>
+            <small>Cores Barba</small>
+            <div class="input">
+              <input value="0" type="range" id="beardcolor" class="slider" min="-1" max="54" v-model.number="beardColor" @input="barberShop">
+            </div>
+          </div>
+          <div class="item" @mouseover="setHover('blush')">
+            <span><input value="0" class="number" ref="blush" type="number" min="-1" max="32" v-model.number="blushModel" @input="barberShop">/32</span>
+            <small>Estilo Blush</small>
+            <div class="input">
+              <input value="0" type="range" id="blush" class="slider" min="-1" max="32" v-model.number="blushModel" @input="barberShop">
+            </div>
+          </div>
+          <div class="item" @mouseover="setHover('blushcolor')">
+            <span><input value="0" class="number" ref="blushcolor" type="number" min="-1" max="63" v-model.number="blushColor" @input="barberShop">/63</span>
+            <small>Cores blush</small>
+            <div class="input">
+              <input value="0" type="range" id="blushcolor" class="slider" min="-1" max="63" v-model.number="blushColor" @input="barberShop">
+            </div>
+          </div>
+          <div class="item" @mouseover="setHover('eyesColor')">
+            <span><input value="0" class="number" ref="eyesColor" type="number" min="-1" max="63" v-model.number="eyesColor" @input="barberShop">/63</span>
+            <small>Cores olhos</small>
+            <div class="input">
+              <input value="0" type="range" id="eyescolor" class="slider" min="-1" max="63" v-model.number="eyesColor" @input="barberShop">
+            </div>
+          </div>
+        </div>
+      </content>
+    </section>
+  </main>
+
+  <footer>
+    <div class="hotkey le">Rotacionar a esquerda <span>[A]</span></div>
+    <div class="hotkey le">Rotacionar a direita <span>[D]</span></div>
+    <div class="hotkey ri">Cancelar e sair <span>[ESC]</span></div>
+  </footer>
+
+</body>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+  <script src="src/js/font.js"></script>
+  <script src="src/js/index.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      window.addEventListener('message', function (event) {
+        if (event.data.openBarbershop == true) {
+          $('body').show()
+        }
+        if (event.data.openBarbershop == false) {
+          $('body').hide();
+          window.location.reload();
+        }
+        
+        const app = new Vue({
+          el: '#pageCustom',
+          data: {
+            hairModel: event.data.hairModel,
+            firstHairColor: event.data.firstHairColor,
+            secondHairColor: event.data.secondHairColor,
+            makeupModel: event.data.makeupModel,
+            makeupcolor: event.data.makeupcolor,
+            lipstickModel: event.data.lipstickModel,
+            lipstickColor: event.data.lipstickColor,
+            beardModel: event.data.beardModel,
+            beardColor: event.data.beardColor,
+            eyebrowsModel: event.data.eyebrowsModel,
+            eyebrowsColor: event.data.eyebrowsColor,
+            blushModel: event.data.blushModel,
+            blushColor: event.data.blushColor,
+            eyesColor: event.data.eyesColor,
+          },
+          methods: {
+            barberShop: function() {
+              const models = {
+                value: false,
+                hairModel: this.hairModel,
+                firstHairColor: this.firstHairColor,
+                secondHairColor: this.secondHairColor,
+                makeupModel: this.makeupModel,
+                makeupcolor: this.makeupcolor,
+                lipstickModel: this.lipstickModel,
+                lipstickColor: this.lipstickColor,
+                beardModel: this.beardModel,
+                beardColor: this.beardColor,
+                eyebrowsModel: this.eyebrowsModel,
+                eyebrowsColor: this.eyebrowsColor,
+                blushModel: this.blushModel,
+                blushColor: this.blushColor,
+                eyesColor: this.eyesColor,
+              }
+              $.post('http://vrp_barbershop/updateSkin', JSON.stringify(models));
+            },
+            setHover: function(e) {
+              this.$refs[e].focus();
+            }
+          }
+        });
+      });
+    });
+</script>
+
+</html>

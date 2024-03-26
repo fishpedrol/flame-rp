@@ -1,0 +1,31 @@
+-----------------------------------------------------------------------------------------------------------------------------------------
+-- CHAT PM
+-----------------------------------------------------------------------------------------------------------------------------------------
+local webhookchatpd = ""
+
+RegisterCommand('cpd',function(a,b,c)if b[1]then local d=vRP.getUserId(a)local e=vRP.getUserIdentity(d)local f="policia.permissao"if vRP.hasPermission(d,f)then local g=vRP.getUsersByPermission(f)for h,i in pairs(g)do local j=vRP.getUserSource(parseInt(i))if j then async(function()TriggerClientEvent('chatMessage',j,'[PD CHAT] '..e.name.." "..e.firstname.." ("..e.user_id..")",{52,174,235},string.sub(c,4))local k=b[1]if k==nil then k=0 end;SendWebhookMessage(webhookchatpd,"```prolog\n[ID]: "..d.." "..e.name.." "..e.firstname.." ("..e.user_id..") \n[CHAT Police]: "..k..os.date("\n[Data]: %d/%m/%Y [Hora]: %H:%M:%S").." \r```")end)end end end end end)
+
+
+--[[ RegisterCommand('cpd',function(source,args,rawCommand)
+    
+	if args[1] then
+		local user_id = vRP.getUserId(source)
+		local identity = vRP.getUserIdentity(user_id)
+		local permission = "policia.permissao"
+		if vRP.hasPermission(user_id,permission) then
+			local pd = vRP.getUsersByPermission(permission)
+			for l,w in pairs(pd) do
+				local police = vRP.getUserSource(parseInt(w))
+				if police then
+					async(function()
+						TriggerClientEvent('chatMessage',police, '[PD CHAT] ' .. identity.name.." "..identity.firstname.." ("..identity.user_id..")",{52, 174, 235}, string.sub(rawCommand, 4))
+						local Mensagem = args[1]
+						if Mensagem == nil then Mensagem = 0 end
+						SendWebhookMessage(webhookchatpd,"```prolog\n[ID]: "..user_id.." "..identity.name.." "..identity.firstname.." ("..identity.user_id..") \n[CHAT Police]: "..Mensagem..os.date("\n[Data]: %d/%m/%Y [Hora]: %H:%M:%S").." \r```")
+					end)
+				end
+			end
+		end
+	end
+end)
+ ]]

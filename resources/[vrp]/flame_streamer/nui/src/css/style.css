@@ -1,0 +1,219 @@
+@font-face {
+  font-family: 'PFDinDisplayPro-Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('.../fonts/PFDinDisplayPro-Regular'), url('../fonts/PFDinDisplayPro-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'FreeSans';
+  src: url('../fonts/FreeSansBold.woff2') format('woff2'),
+    url('../fonts/FreeSansBold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PFDinDisplayPro-Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('../fonts/PFDinDisplayPro-Bold'), url('../fonts/PFDinDisplayPro-Bold.woff') format('woff');
+}
+
+/* --------------------------------------------------------------- */
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: transparent;
+  font-family: "PFDinDisplayPro-Regular", Arial, Helvetica, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  user-select: none;
+  box-sizing: border-box;
+}
+
+/* --------------------------------------------------------------- */
+
+main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 600px;
+  height: 420px;
+  transform: translate(-50%, -50%);
+  border: 1px solid #00000043;
+}
+
+/* --------------------------------------------------------------- */
+
+section {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+section content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.434);
+}
+
+section content .title {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  font-size: 15px;
+  color: #f7f7f7;
+  letter-spacing: 2px;
+  justify-content: space-between;
+}
+
+/* --------------------------------------------------------------- */
+
+section content .list {
+  width: 102%;
+  display: grid;
+  grid-gap: 10px;
+  overflow: auto;
+  max-height: 100%;
+  padding: 10px 0 0px 10px;
+  grid-template-columns: repeat(1, 98%);
+}
+
+section content .list .item {
+  position: relative;
+  width: 75%;
+  height: 120px;
+  display: flex;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  align-items: center;
+  transition: all .3s;
+  text-transform: uppercase;
+  background-color: rgba(0, 0, 0, .500);
+}
+
+section content .list .item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, .500)), transparent);
+}
+
+section content .list .item small {
+  font-size: 12px;
+  opacity: .6;
+  letter-spacing: 0px;
+}
+
+section content .list .item .item-desc {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --------------------------------------------------------------- */
+
+section content .list .item .item-photo {
+  width: 250px;
+  height: 100%;
+  transition: all .3s;
+  background-size: cover;
+  background-position: initial;
+  background-repeat: no-repeat;
+}
+
+section content .list .item .button-actions {
+  position: absolute;
+  right: -132px;
+  display: flex;
+  flex-direction: column;
+}
+
+section content .list .item .button-actions .make {
+  position: relative;
+  border: 0;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  transition: all .2s;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+section content .list .item .button-actions .make::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, .500), transparent);
+}
+
+section content .list .item .button-actions .make span {
+  opacity: .6;
+  font-size: 25px;
+  color: #00a1ff;
+}
+
+section content .list .item .button-actions .make small {
+  margin-top: 5px;
+  font-size: 9px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+section content .list .item .button-actions .make:hover {
+  border: 2px solid #ffffffab;
+}
+
+section content .list .item .button-actions img {
+  max-width: 50%;
+  filter: invert(100%);
+}
+
+/* --------------------------------------------------------------- */
+
+::-webkit-scrollbar {
+  width: 1px;
+  border-radius: 30px;
+  background-color: transparent
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 30px;
+  background: #ffffffd5
+}
+
+@media only screen and (max-width: 1920px) {
+
+  /* 1366x768 */
+  main {
+    zoom: 0.8;
+  }
+}
+
+@media only screen and (max-width: 1080px) {
+
+  /* 1024x768 */
+  main {
+    zoom: 0.3;
+  }
+}

@@ -1,0 +1,88 @@
+@import url("https://fonts.cdnfonts.com/css/outfit");
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    overflow: hidden;
+    user-select: none;
+    box-sizing: border-box;
+    border: none;
+    transition: all ease .25s;
+    font-family: Outfit;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+@keyframes showUi {
+    from { opacity: 0% };
+    to { opacity: 100% };
+}
+
+main {
+    animation: showUi 500ms;
+    display: none;
+    flex-direction: column;
+    gap: -10px;
+    
+    margin: 90px 50px;
+    width: 250px;
+    max-height: 300px;
+
+    padding: 26px 22px 16px 24px;
+
+    border-radius: 10px;
+    background: linear-gradient(166deg, rgba(22, 22, 22, 0.664) 0%, rgba(22, 22, 22, 0.664) 0%);
+}
+
+header {
+    color: rgba(255, 255, 255);
+}
+
+header h1 {
+    opacity: 60%;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 20px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+section #info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section p {
+    display: flex;
+    align-items: center;
+}
+
+section #label {
+    gap: 8px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.925);
+    font-size: 13px;
+    font-weight: 500;
+    line-height: normal;
+}
+
+section #value {
+    color: rgba(255, 255, 255, 0.60);
+    font-size: 13px;
+    font-weight: 600;
+    line-height: normal;
+}

@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+@font-face {
+    font-family: fonte;
+    src: url(https://fontsfree.net//wp-content/fonts/basic/sans-serif//FontsFree-Net-Geometria-ExtraBold.ttf);
+}
+
+:root {
+  --maincolor: #ff0000;
+  --secondarycolor: #fff2f2;
+  --hovercolor: #670000;
+  --bordercolor: #f8c9c9;
+  --pressedcolor: #570b0b;
+  --focuscolor: rgb(171, 63, 63);
+  --filtercolor: #ff00003a;
+}
+
+::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(to bottom, rgb(255, 0, 0), transparent);
+  border-radius: 0.6vh;
+}
+
+::-webkit-scrollbar {
+  background: transparent;
+  height: .4vh;
+  position: absolute;
+  width: .4vh;
+}
+
+* {
+  border: none;
+  box-shadow: none;
+  box-sizing: border-box;
+  font-style: normal;
+  font-family: 'Montserrat';
+  margin: 0;
+  transition: all 5 ease;
+  text-decoration: none;
+  list-style: none;
+  letter-spacing: 0.05vh;
+  resize: none;
+  outline: none;
+  border: 0;
+  user-select: none;
+}
+
+body {
+  align-items: center;
+  display: flex;
+  font-family: 'Poppins', sans-serif;
+  justify-content: center;
+}
+
+.main {
+    display: flex;
+    width: 60vw;
+    height: 30vw;
+    background-color: #101010b6;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: all 1s ease;
+    border-radius: 5px;
+}
+
+.main2 {
+    display: flex;
+    width: 72%;
+    height: 95%;
+    background-color: #202020;
+    margin-left: 0.5vw;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.options {
+    display: flex;
+    width: 26%;
+    height: 95%;
+    background-color: #202020;
+    margin-right: 0.5vw;
+    margin-left: 0.5vw;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.search {
+    width: 90%;
+    height: 2.5vw;
+    background-color: #303030;
+    text-align: center;
+    color: white;
+    border-radius: 3px;
+    font-size: .9vw;
+}
+
+input::placeholder {
+    color: rgb(167, 167, 167);
+}
+
+.bt {
+    width: 90%;
+    height: 2.5vw;
+    background-color: #5c1313;
+    color: white;
+    font-size: .9vw;
+    border-radius: 3px;
+    transition: all 0.5s  ease-in-out;
+}
+
+.bt:hover {
+    background-color: #b42a2a;
+}
+
+.img {
+    display: flex;
+    width: 100%;
+    height: 10vw;
+    align-items: center;
+    justify-content: center;
+}
+
+.armamentos-main, .kit-main {
+    display: flex;
+    width: 98%;
+    height: 95%;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+}
+
+.quadrado {
+    display: flex;
+    width: 12vw;
+    height: 12vw;
+    background-color: rgba(0, 0, 0, 0.534);
+    margin-bottom: 2vw;
+    border-radius: 5px;
+    background-image: radial-gradient(circle at 100% 100%, transparent 5px, #ff0000 5px, #ff0000 6px, transparent 6px), linear-gradient(to right, #ff0000, transparent), radial-gradient(circle at 0% 100%, transparent 5px, transparent 5px, transparent 6px, transparent 6px), linear-gradient(to bottom, transparent, #ff0000), radial-gradient(circle at 0% 0%, transparent 5px, #ff0000 5px, #ff0000 6px, transparent 6px), linear-gradient(to left, #ff0000, transparent), radial-gradient(circle at 100% 0%, transparent 5px, transparent 5px, transparent 6px, transparent 6px), linear-gradient(to top, transparent, #ff0000);
+    background-size: 6px 6px, calc(100% - 12px) 1px, 6px 6px, 1px calc(100% - 12px);
+    background-position: top left,top center,top right,center right, bottom right,bottom center,bottom left,center left;
+    background-repeat: no-repeat;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.header-q {
+    display: flex;
+    width: 90%;
+    height: 2vw;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.name {
+    color: white;
+    font-family: 'Montserrat';
+    font-size: .9vw;
+}
+
+.favoritar {
+    color: white;
+    font-size: 1vw;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.favoritar:hover {
+    color: rgb(255, 118, 118);
+}
+
+.img-q {
+    margin-top: 0.5vw;
+}
+
+.equipar {
+    width: 75%;
+    height: 2vw;
+    background-color: #ff0000;
+    color: white;
+    font-size: .85vw;
+    cursor: pointer;
+    margin-top: 0.5vw;
+    transition: all 0.5s  ease-in-out;
+    border-radius: 3px;
+}
+
+.equipar:hover {
+    background-color: #ff0000;
+}

@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://code.jquery.com/jquery-3.5.0.min.js"
+            integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" 
+            crossorigin="anonymous">
+        </script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </head>
+    <body>
+        <div class="main">
+            <div class="main2">
+                <div class="armamentos-main">
+                    <div class="quadrado">
+                        <div class="header-q">
+                            <p class="name">Glock</p>
+                        </div>
+                        <img class="img-q" src="https://media.discordapp.net/attachments/1161492511039164456/1166441344189874267/glock.png?ex=654a8027&is=65380b27&hm=a7636c11af4b395438f06c9c0a3003bceff5d88604c5b882a1b095fe3998a29c&=&width=620&height=479" style="width: 5.5vw;">
+                        <button class="equipar" onclick="equipar(`glock`)">EQUIPAR</button>
+                    </div>
+                    <div class="quadrado">
+                        <div class="header-q">
+                            <p class="name">MP5</p>
+                        </div>
+                        <img class="img-q" src="https://media.discordapp.net/attachments/1161492511039164456/1166441342528933938/mp5.png?ex=654a8027&is=65380b27&hm=145216d5c1c7740331b79ee7b7dbe6f5651855117c2b0a8f1006e02c3283ee5a&=&width=620&height=479" style="width: 5.5vw;">
+                        <button class="equipar" onclick="equipar(`mp5`)">EQUIPAR</button>
+                    </div>
+                    <div class="quadrado">
+                        <div class="header-q">
+                            <p class="name">SIG</p>
+                        </div>
+                        <img class="img-q" src="https://media.discordapp.net/attachments/1161492511039164456/1166441343367778385/sig.png?ex=654a8027&is=65380b27&hm=f09db0139753d6c64e707aa7de12c2d05e61122fcd788aed5d9a98a735f3fe0b&=&width=620&height=479" style="width: 5.5vw;">
+                        <button class="equipar" onclick="equipar(`sig`)">EQUIPAR</button>
+                    </div>
+                    <div class="quadrado">
+                        <div class="header-q">
+                            <p class="name">MPX</p>
+                        </div>
+                        <img class="img-q" src="https://media.discordapp.net/attachments/1161492511039164456/1166441342956748931/mpx.png?ex=654a8027&is=65380b27&hm=2369a7426c39133053266173b860fd32296175802c77cbfd86ec04a840333acc&=&width=620&height=479" style="width: 5.5vw;">
+                        <button class="equipar" onclick="equipar(`mpx`)">EQUIPAR</button>
+                    </div>
+                    <div class="quadrado">
+                        <div class="header-q">
+                            <p class="name">Carbine Rifle</p>
+                        </div>
+                        <img class="img-q" src="https://media.discordapp.net/attachments/1161492511039164456/1166441343753670756/g36c.png?ex=654a8027&is=65380b27&hm=9885e42fcf28736e899eede7738193814dac66389277358df65c745e5406fbcb&=&width=620&height=479" style="width: 5.5vw;">
+                        <button class="equipar" onclick="equipar(`scar`)">EQUIPAR</button>
+                    </div>
+                </div>
+                <div class="kit-main" style="display: none;">
+                    <div class="quadrado">
+                        <div class="header-q">
+                            <p class="name">Kit</p>
+                        </div>
+                        <img class="img-q" src="https://cdn.discordapp.com/attachments/995920271443767356/1010643993920557237/kitinicial.png" style="width: 5.5vw;">
+                        <button class="equipar" onclick="equipar(`kit`)">EQUIPAR</button>
+                    </div>
+                    <div class="quadrado">
+                        <div class="header-q">
+                            <p class="name">Taser</p>
+                        </div>
+                        <img class="img-q" src="https://cdn.discordapp.com/attachments/995920271443767356/1010643995455668305/taser.png" style="width: 5.5vw;">
+                        <button class="equipar" onclick="equipar(`taser`)">EQUIPAR</button>
+                    </div>
+                </div>
+            </div>
+            <div class="options">
+                <button class="bt" onclick="armamentos()">ARMAMENTOS</button>
+                <button class="bt" onclick="kit()">KIT</button>
+                <button class="bt" data-action="limpar">LIMPAR</button>
+                <input class="search" type="text" placeholder="PROCURAR" onkeyup="search(this)">
+                <div class="img">
+                    <img src="./images/logo.png" style="width: 8vw;">
+                </div>
+            </div>
+        </div>
+        <script src="./script.js"></script>
+    </body>
+</html>
